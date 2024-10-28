@@ -21,4 +21,9 @@ def generate_full_wordlist(filename="wordlist.txt"):
                         elapsed_time = time.time() - start_time
                         progress = counter / total_combinations
                         eta = elapsed_time / progress - elapsed_time
-                        print(f"Progress: {progress:.2%
+                        print(f"Progress: {progress:.2%} - ETA: {eta/60:.2f} minutes")
+
+    print(f"Finished! Total time: {(time.time() - start_time) / 60:.2f} minutes.")
+
+# Call the function
+generate_full_wordlist("full_wordlist.txt")
